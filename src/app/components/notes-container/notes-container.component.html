@@ -1,0 +1,6 @@
+<div class="container">
+  <div class="card-columns">
+        <app-note *ngFor="let note of notes; let i = index"
+        [note]="note" [index]="i"></app-note>
+  </div>
+</div>

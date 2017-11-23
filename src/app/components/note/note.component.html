@@ -1,0 +1,17 @@
+<div class="card bg-light mb-2 mt-2">
+  <h4 class="card-header" *ngIf="note.title">
+    {{note.title}}
+  </h4>
+
+  <textarea class="form-control form-control-lg" (keyup)="adjustSize()"
+  [id]="'note' + index" #textarea [value]="note.text" autosize></textarea>
+
+  <div class="card-footer text-right">
+    <button type="button" class="btn btn-primary"  (click)="updateNote(i, textarea.value)">
+      Actualizar
+    </button>
+    <button type="button" class="btn btn-danger" (click)="deleteNote()">
+      Eliminar
+    </button>
+  </div>
+</div>
